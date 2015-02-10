@@ -1,6 +1,7 @@
+#For example routes
 module V1
   class AutoresAPI < Base
-    namespace "autores"
+    namespace "authors"
 
       get "/" do
         guard!
@@ -14,7 +15,7 @@ module V1
 
       delete "/" do
         guard!
-        { :secret => "aca se elimina!!! :)" }
+        { :secret => "this is a text!!! :)" }
       end
 
 
@@ -24,7 +25,7 @@ module V1
           Autor.find(params[:id])
         end 
 
-        resource :libros do
+        resource :books do
           get "/" do
             guard!
             puts params
